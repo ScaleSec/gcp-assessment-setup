@@ -1,0 +1,35 @@
+title: "scalesec-security-assessment"
+description: "Allows ScaleSec consultants minimum read-only permissions to assess GCP security"
+stage: "BETA"
+includedPermissions:
+  # organization level only - won't work at project level
+- billing.accounts.list
+- resourcemanager.organizations.get
+  # hierarchy
+- resourcemanager.projects.get
+- resourcemanager.projects.getIamPolicy
+- resourcemanager.folders.list
+- resourcemanager.folders.get
+  # gke
+- container.clusters.list
+- container.nodes.list
+  # kms
+- cloudkms.keyRings.list
+- cloudkms.cryptoKeys.list
+- cloudkms.cryptoKeyVersions.list
+- cloudkms.cryptoKeys.get
+  # dns
+- dns.managedZones.list
+  # vpc
+- compute.networks.list
+- compute.subnetworks.list
+- compute.firewalls.list
+  # vm
+- compute.instances.list
+  # cloud sql
+- cloudsql.instances.list
+  # stackdriver
+- logging.sinks.list
+  # gcs
+- storage.buckets.list
+- storage.buckets.get
