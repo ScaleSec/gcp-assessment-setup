@@ -10,8 +10,12 @@ includedPermissions:
 - resourcemanager.projects.getIamPolicy
 - resourcemanager.folders.list
 - resourcemanager.folders.get
+  # iam
+- iam.serviceAccounts.list
+- iam.serviceAccountKeys.list
   # gke
 - container.clusters.list
+- container.clusters.get
 - container.nodes.list
   # kms
 - cloudkms.keyRings.list
@@ -27,6 +31,7 @@ includedPermissions:
 - compute.firewalls.list
   # vm
 - compute.instances.list
+- compute.projects.get
   # cloud sql
 - cloudsql.instances.list
   # stackdriver
@@ -38,3 +43,4 @@ includedPermissions:
   # gcs
 - storage.buckets.list
 - storage.buckets.get
+- storage.buckets.getIamPolicy
