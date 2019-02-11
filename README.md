@@ -25,14 +25,14 @@ git clone https://github.com/ScaleSec/gcp-assessment-setup.git
 cd gcp-security-assessment/
 ```
 
-5. Edit the `manage_security_assessment_role.sh` and set variables:
+5. Edit the `manage_security_assessment_role.sh` and set the organization name:
 
 ```
 ORG_NAME="example.com"
-ROLE_ID="scalesec_assessment"
-YAML_PATH="./security_assessment_role.yaml"
-SERVICE_ACCOUNT="scalesec-security-assessment@scalesec-dev.iam.gserviceaccount.com"
 ```
+
+_Note: other variables including the `ROLE_ID`, `YAML_PATH`, and `SERVICE_ACCOUNT` should not be changed._ 
+
 
 6. Run the script to set permissions:
 
