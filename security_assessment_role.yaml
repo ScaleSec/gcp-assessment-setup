@@ -45,3 +45,4 @@ includedPermissions:
 - storage.buckets.list
 - storage.buckets.get
 - storage.buckets.getIamPolicy
+- storage.objects.getIamPolicy
