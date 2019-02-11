@@ -21,6 +21,7 @@ includedPermissions:
   # dns
 - dns.managedZones.list
   # vpc
+- compute.zones.list
 - compute.networks.list
 - compute.subnetworks.list
 - compute.firewalls.list
