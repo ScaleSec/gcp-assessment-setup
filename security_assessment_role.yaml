@@ -32,6 +32,7 @@ includedPermissions:
 - compute.firewalls.list
   # vm
 - compute.instances.list
+- compute.instances.get
 - compute.projects.get
   # cloud sql
 - cloudsql.instances.list
