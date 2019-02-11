@@ -30,6 +30,10 @@ includedPermissions:
 - cloudsql.instances.list
   # stackdriver
 - logging.sinks.list
+- monitoring.alertPolicies.list
+- monitoring.alertPolicies.get
+- logging.logMetrics.get
+- logging.logMetrics.list
   # gcs
 - storage.buckets.list
 - storage.buckets.get
