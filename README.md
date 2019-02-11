@@ -22,7 +22,7 @@ gcloud config set project my-project-id-123
 
 ```
 git clone https://github.com/ScaleSec/gcp-assessment-setup.git
-cd gcp-security-assessment/
+cd gcp-assessment-setup/
 ```
 
 5. Edit the `manage_security_assessment_role.sh` and set the organization name:
