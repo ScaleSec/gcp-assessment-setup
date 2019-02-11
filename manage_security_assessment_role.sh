@@ -9,7 +9,7 @@
 
 
 # variables
-ORG_NAME="example.com"
+ORG_NAME="scalesec.net"
 ROLE_ID="scalesec_assessment"
 YAML_PATH="./security_assessment_role.yaml"
 SERVICE_ACCOUNT="scalesec-security-assessment@scalesec-dev.iam.gserviceaccount.com"
