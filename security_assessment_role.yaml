@@ -4,6 +4,7 @@ stage: "BETA"
 includedPermissions:
   # organization level only - won't work at project level
 - billing.accounts.list
+- billing.resourceAssociations.list
 - resourcemanager.organizations.get
   # hierarchy
 - resourcemanager.projects.get
@@ -35,7 +36,9 @@ includedPermissions:
 - compute.instances.get
 - compute.projects.get
   # cloud sql
-- cloudsql.instances.list
+- cloudsql.instances.get
+- cloudsql.databases.list
+- cloudsql.users.list
   # stackdriver
 - logging.sinks.list
 - monitoring.alertPolicies.list
