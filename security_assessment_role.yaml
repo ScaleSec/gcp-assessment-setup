@@ -36,6 +36,7 @@ includedPermissions:
 - compute.instances.get
 - compute.projects.get
   # cloud sql
+- cloudsql.instances.list
 - cloudsql.instances.get
 - cloudsql.databases.list
 - cloudsql.users.list
