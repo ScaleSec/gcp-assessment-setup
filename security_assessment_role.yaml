@@ -52,3 +52,10 @@ includedPermissions:
 - storage.buckets.getIamPolicy
 - storage.objects.list
 - storage.objects.getIamPolicy
+
+  # caution
+# - storage.objects.get
+# ^ Required to inspect object ACLs for cloud storage objects.
+# The same API call is used for metadata and content requests:
+# https://cloud.google.com/storage/docs/json_api/v1/objects/get
+# Do not enable this permission without understanding it.
