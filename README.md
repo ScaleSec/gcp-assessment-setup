@@ -1,6 +1,10 @@
 # gcp-assessment-setup
 Give ScaleSec limited access to your GCP organization for a security assessment.
 
+One user account `chrisl@scalesec.com` and one Service Account `scalesec-security-assessment@scalesec-dev.iam.gserviceaccount.com` will be added with minimal privliges into your GCP organization.
+
+The user account is added as a workaround for a bug with service account authentications.  In the future only the service account will need to be added.
+
 ## Prerequisites
 The following items are required for a successful setup.
 
