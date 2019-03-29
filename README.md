@@ -12,6 +12,10 @@ The following items are required for a successful setup.
 
 1. Open your Google Cloud [console](https://console.cloud.google.com).
 2. Open Cloud Shell
+
+![Alt Text](https://cloud.google.com/shell/docs/images/shellstart-update.gif)
+
+
 3. Make sure to set your project to the project you want scanned.
 
 ```
@@ -46,28 +50,28 @@ bash manage_security_assessment_role.sh create
 bash enable_service_apis.sh
 ```
 
-### 8. Select the Newly Created Service Account from the Service Accounts Pane to get to the `Service Account Details` and select `edit`
+8. Select the Newly Created Service Account from the Service Accounts Pane to get to the `Service Account Details` and select `edit`
 
 ![SA_EDIT_DETAILS](./IMG/CREATE_KEY.png)
 
-### 9. Select the `SHOW DOMAIN-WIDE DELEGATION` drop-down and select the checkbox for `Enable G Suite Domain-Wide Delegation`.  Click `Save`
+9. Select the `SHOW DOMAIN-WIDE DELEGATION` drop-down and select the checkbox for `Enable G Suite Domain-Wide Delegation`.  Click `Save`
 
 ![DWD_SA](./IMG/DWD_SA.png)
 
-### 10. Copy down the Client ID (This will be used in the G-Suite Admin Console)
+10. Copy down the Client ID (This will be used in the G-Suite Admin Console)
 
 ![Client_ID](./IMG/Client_ID.png)
 
 ## From the Admin Console (https://admin.google.com):
 
-### 11. Sign into the Admin Console with a `Super User` Account:
+11. Sign into the Admin Console with a `Super User` Account:
 
 ![ADMIN_CONSOLE](./IMG/ADMIN_CONSOLE.png)
 
-### 12. Select Security --> Advanced Settings --> Manage API Client Access
+12. Select Security --> Advanced Settings --> Manage API Client Access
 
 ![ADV_SETTINGS](./IMG/ADV_SETTINGS.png)
 
-### 13. Input the Client ID from Step 8 into the `Client Name` Field.  Add `https://www.googleapis.com/auth/admin.directory.user.readonly` to the API Scopes Field
+13. Input the Client ID from Step 8 into the `Client Name` Field.  Add `https://www.googleapis.com/auth/admin.directory.user.readonly` to the API Scopes Field
 
 ![ADD_SCOPES](./IMG/ADD_SCOPES.png)
