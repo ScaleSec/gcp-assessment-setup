@@ -1,4 +1,4 @@
-title: "scalesec-security-assessment"
+title: "scalesec-security-assessment-4"
 description: "Allows ScaleSec consultants minimum read-only permissions to assess GCP security"
 stage: "BETA"
 includedPermissions:
@@ -30,9 +30,11 @@ includedPermissions:
 - compute.regions.list
 - compute.zones.list
 - compute.networks.list
+- compute.networks.get
 - compute.subnetworks.list
 - compute.subnetworks.get
 - compute.firewalls.list
+- compute.firewalls.get
   # vm
 - compute.instances.list
 - compute.instances.get
