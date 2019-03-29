@@ -31,6 +31,7 @@ includedPermissions:
 - compute.zones.list
 - compute.networks.list
 - compute.subnetworks.list
+- compute.subnetworks.get
 - compute.firewalls.list
   # vm
 - compute.instances.list
