@@ -1,4 +1,4 @@
-title: "scalesec-security-assessment-4"
+title: "scalesec-security-assessment"
 description: "Allows ScaleSec consultants minimum read-only permissions to assess GCP security"
 stage: "BETA"
 includedPermissions:
