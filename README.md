@@ -52,7 +52,7 @@ bash enable_service_apis.sh
 
 ## From the Admin Console (https://admin.google.com):
 
-8. Sign into the Admin Console with a `Super User` Account:
+8. Sign into the [Admin Console](https://admin.google.com) with a `Super User` Account:
 
 <p align="center">
     <img src="./IMG/ADMIN_CONSOLE.png" alt="drawing" width="400"/>
