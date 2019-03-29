@@ -13,7 +13,6 @@ ORG_NAME="gamine-technologies.com"
 ROLE_ID="scalesec_assessment"
 YAML_PATH="./security_assessment_role.yaml"
 SERVICE_ACCOUNT="scalesec-security-assessment@scalesec-dev.iam.gserviceaccount.com"
-USER_ACCOUNT="chrisl@scalesec.com"
 
 get_org_id ()
 {
@@ -86,13 +85,11 @@ delete ()
 create_iam_binding () 
 {
     gcloud organizations add-iam-policy-binding "${ORG_ID}" --member=serviceAccount:"${SERVICE_ACCOUNT}" --role organizations/"${ORG_ID}"/roles/"${ROLE_ID}"
-    gcloud organizations add-iam-policy-binding "${ORG_ID}" --member=user:"${USER_ACCOUNT}" --role organizations/"${ORG_ID}"/roles/"${ROLE_ID}"
 }
 
 remove_iam_binding ()
 {
-    gcloud organizations remove-iam-policy-binding "${ORG_ID}" --member=serviceAccount:"${SERVICE_ACCOUNT}" --role organizations/"${ORG_ID}"/roles/"${ROLE_ID}"
-    gcloud organizations remove-iam-policy-binding "${ORG_ID}" --member=member:"${USER_ACCOUNT}" --role organizations/"${ORG_ID}"/roles/"${ROLE_ID}"       
+    gcloud organizations remove-iam-policy-binding "${ORG_ID}" --member=serviceAccount:"${SERVICE_ACCOUNT}" --role organizations/"${ORG_ID}"/roles/"${ROLE_ID}"     
 }
 
 # get the organization ID
