@@ -13,6 +13,7 @@ includedPermissions:
 - resourcemanager.folders.get
   # iam
 - iam.serviceAccounts.list
+- iam.serviceAccounts.get
 - iam.serviceAccountKeys.list
   # gke
 - container.clusters.list
