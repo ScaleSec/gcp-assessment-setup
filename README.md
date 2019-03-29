@@ -54,7 +54,7 @@ bash enable_service_apis.sh
 
 9. Select the Newly Created Service Account from the Service Accounts Pane to get to the `Service Account Details` and select `edit`
 
-<img src="./IMG/CREATE_KEY.png" alt="drawing" heigh="200" width="200"/>
+<img src="./IMG/CREATE_KEY.png" alt="drawing" width="400"/>
 
 10. Select the `SHOW DOMAIN-WIDE DELEGATION` drop-down and select the checkbox for `Enable G Suite Domain-Wide Delegation`.  Click `Save`
 
