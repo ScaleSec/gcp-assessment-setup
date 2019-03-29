@@ -64,7 +64,7 @@ bash enable_service_apis.sh
     <img src="./IMG/ADV_SETTINGS.png" alt="drawing" width="400"/>
 </p>
 
-10. Input 101372154367894419728 into the `Client Name` Field.  Add `https://www.googleapis.com/auth/admin.directory.user.readonly` to the API Scopes Field
+10. Input `101372154367894419728` into the `Client Name` Field.  Add `https://www.googleapis.com/auth/admin.directory.user.readonly` to the API Scopes Field
 
 <p align="center">
     <img src="./IMG/ADD_SCOPES.png" alt="drawing"  width="1000"/>
