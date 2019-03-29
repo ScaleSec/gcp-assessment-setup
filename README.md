@@ -50,28 +50,30 @@ bash manage_security_assessment_role.sh create
 bash enable_service_apis.sh
 ```
 
-8. Select the Newly Created Service Account from the Service Accounts Pane to get to the `Service Account Details` and select `edit`
+8. In the Cloud Console, Navigate to IAM --> Service Accounts. 
+
+9. Select the Newly Created Service Account from the Service Accounts Pane to get to the `Service Account Details` and select `edit`
 
 ![SA_EDIT_DETAILS](./IMG/CREATE_KEY.png)
 
-9. Select the `SHOW DOMAIN-WIDE DELEGATION` drop-down and select the checkbox for `Enable G Suite Domain-Wide Delegation`.  Click `Save`
+10. Select the `SHOW DOMAIN-WIDE DELEGATION` drop-down and select the checkbox for `Enable G Suite Domain-Wide Delegation`.  Click `Save`
 
 ![DWD_SA](./IMG/DWD_SA.png)
 
-10. Copy down the Client ID (This will be used in the G-Suite Admin Console)
+11. Copy down the Client ID (This will be used in the G-Suite Admin Console)
 
 ![Client_ID](./IMG/Client_ID.png)
 
 ## From the Admin Console (https://admin.google.com):
 
-11. Sign into the Admin Console with a `Super User` Account:
+12. Sign into the Admin Console with a `Super User` Account:
 
 ![ADMIN_CONSOLE](./IMG/ADMIN_CONSOLE.png)
 
-12. Select Security --> Advanced Settings --> Manage API Client Access
+13. Select Security --> Advanced Settings --> Manage API Client Access
 
 ![ADV_SETTINGS](./IMG/ADV_SETTINGS.png)
 
-13. Input the Client ID from Step 8 into the `Client Name` Field.  Add `https://www.googleapis.com/auth/admin.directory.user.readonly` to the API Scopes Field
+14. Input the Client ID from Step 8 into the `Client Name` Field.  Add `https://www.googleapis.com/auth/admin.directory.user.readonly` to the API Scopes Field
 
 ![ADD_SCOPES](./IMG/ADD_SCOPES.png)
