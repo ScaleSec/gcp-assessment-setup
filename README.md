@@ -59,22 +59,32 @@ bash enable_service_apis.sh
 
 10. Select the `SHOW DOMAIN-WIDE DELEGATION` drop-down and select the checkbox for `Enable G Suite Domain-Wide Delegation`.  Click `Save`
 
-![DWD_SA](./IMG/DWD_SA.png)
+<p align="center">
+    <img src="./IMG/DWD_SA.png" alt="drawing" width="400"/>
+</p>
 
 11. Copy down the Client ID (This will be used in the G-Suite Admin Console)
 
-![Client_ID](./IMG/Client_ID.png)
+<p align="center">
+    <img src="./IMG/Client_ID.png" alt="drawing" width="400"/>
+</p>
 
 ## From the Admin Console (https://admin.google.com):
 
 12. Sign into the Admin Console with a `Super User` Account:
 
-![ADMIN_CONSOLE](./IMG/ADMIN_CONSOLE.png)
+<p align="center">
+    <img src="./IMG/ADMIN_CONSOLE.png" alt="drawing" width="400"/>
+</p>
 
 13. Select Security --> Advanced Settings --> Manage API Client Access
 
-![ADV_SETTINGS](./IMG/ADV_SETTINGS.png)
+<p align="center">
+    <img src="./IMG/ADV_SETTINGS.png" alt="drawing" width="400"/>
+</p>
 
 14. Input the Client ID from Step 8 into the `Client Name` Field.  Add `https://www.googleapis.com/auth/admin.directory.user.readonly` to the API Scopes Field
 
-![ADD_SCOPES](./IMG/ADD_SCOPES.png)
+<p align="center">
+    <img src="./IMG/ADD_SCOPES.png" alt="drawing" width="400"/>
+</p>
