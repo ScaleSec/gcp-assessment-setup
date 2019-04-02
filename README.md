@@ -48,7 +48,9 @@ bash enable_service_apis.sh
 
 ## From the Admin Console (https://admin.google.com):
 
-The Service Account is required to have Admin Console Access in order to test if all users have MFA enabled.  This Service Account will have minimal permissions as laid out in Step 9
+The Service Account is required to have permission to impersonate a Super Admin in order to test if all users have MFA enabled.  This Service Account will have minimal permission scopes as laid out in Step 9.
+
+Google Documentation around this subject is located [here](https://developers.google.com/admin-sdk/directory/v1/guides/delegation).  The Customer will also need to provide the email address of the Super Admin to impersonate.
 
 7. Sign into the [Admin Console](https://admin.google.com) with a `Super User` Account:
 
