@@ -69,3 +69,26 @@ Google Documentation around this subject is located [here](https://developers.go
 <p align="center">
     <img src="./IMG/ADD_SCOPES.png" alt="drawing"  width="1000"/>
 </p>
+
+
+## Removing Access
+
+1. Run the script to remove permissions:
+
+```
+bash manage_security_assessment_role.sh delete
+```
+
+2. Sign into the [Admin Console](https://admin.google.com) with a `Super User` Account:
+
+<p align="center">
+    <img src="./IMG/ADMIN_CONSOLE.png" alt="drawing" width="400"/>
+</p>
+
+3. Select Security --> Advanced Settings --> Manage API Client Access
+
+<p align="center">
+    <img src="./IMG/ADV_SETTINGS.png" alt="drawing" width="400"/>
+</p>
+
+4. Select the "Remove" button for the appropriate `Client Name`
