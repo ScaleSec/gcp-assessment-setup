@@ -71,7 +71,7 @@ Google Documentation around this subject is located [here](https://developers.go
 </p>
 
 
-## Removing Access
+## Removing Access Instructions
 
 1. Run the script to remove permissions:
 
