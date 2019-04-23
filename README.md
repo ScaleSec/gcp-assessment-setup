@@ -1,7 +1,7 @@
 # gcp-assessment-setup
 Give ScaleSec limited access to your GCP organization for a security assessment.
 
-`scalesec-security-assessment@scalesec-dev.iam.gserviceaccount.com` will be added with minimal privliges into your GCP organization.
+`scalesec-security-assessment@scalesec-dev.iam.gserviceaccount.com` will be added with minimal privileges into your GCP organization.
 
 ## Prerequisites
 The following items are required for a successful setup.
