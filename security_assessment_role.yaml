@@ -2,31 +2,33 @@ title: "scalesec-security-assessment"
 description: "Allows ScaleSec consultants minimum read-only permissions to assess GCP security"
 stage: "BETA"
 includedPermissions:
-  # organization level only - won't work at project level
+  # Billing Accounts
 - billing.accounts.list
 - billing.resourceAssociations.list
+- billing.accounts.getIamPolicy
 - resourcemanager.organizations.get
-  # hierarchy
+  # Google Cloud Resource Manager
 - resourcemanager.projects.get
 - resourcemanager.projects.getIamPolicy
 - resourcemanager.folders.list
 - resourcemanager.folders.get
-  # iam
+  # Google Cloud IAM
 - iam.serviceAccounts.list
 - iam.serviceAccounts.get
 - iam.serviceAccountKeys.list
-  # gke
+  # Google Cloud GKE
 - container.clusters.list
 - container.clusters.get
 - container.nodes.list
-  # kms
+  # Google Cloud KMS 
 - cloudkms.keyRings.list
 - cloudkms.cryptoKeys.list
 - cloudkms.cryptoKeyVersions.list
 - cloudkms.cryptoKeys.get
-  # dns
+- cloudkms.cryptoKeys.getIamPolicy
+  # Google Cloud DNS 
 - dns.managedZones.list
-  # vpc
+  # Virtual Private Cloud 
 - compute.regions.list
 - compute.zones.list
 - compute.networks.list
@@ -35,22 +37,38 @@ includedPermissions:
 - compute.subnetworks.get
 - compute.firewalls.list
 - compute.firewalls.get
-  # vm
+  # Google Compute Engine
 - compute.instances.list
 - compute.instances.get
 - compute.projects.get
-  # cloud sql
+- compute.firewalls.get
+- compute.firewalls.list
+- compute.instances.get
+- compute.instances.list
+- compute.networks.get
+- compute.networks.list
+- compute.projects.get
+- compute.regions.list
+- compute.sslPolicies.get
+- compute.sslPolicies.list
+- compute.subnetworks.get
+- compute.subnetworks.list
+- compute.targetHttpsProxies.get
+- compute.targetHttpsProxies.list
+- compute.zones.list
+  # Google Cloud SQL
 - cloudsql.instances.list
 - cloudsql.instances.get
 - cloudsql.databases.list
 - cloudsql.users.list
-  # stackdriver
+  # Cloud Operations
 - logging.sinks.list
 - monitoring.alertPolicies.list
 - monitoring.alertPolicies.get
 - logging.logMetrics.get
 - logging.logMetrics.list
-  # gcs
+- logging.sinks.get
+  # Google Cloud Storage
 - storage.buckets.list
 - storage.buckets.get
 - storage.buckets.getIamPolicy
@@ -63,3 +81,29 @@ includedPermissions:
 # The same API call is used for metadata and content requests:
 # https://cloud.google.com/storage/docs/json_api/v1/objects/get
 # Do not enable this permission without understanding it.
+
+  # Google Security Command Center
+- securitycenter.assets.group
+- securitycenter.assets.list
+- securitycenter.assets.listAssetPropertyNames
+- securitycenter.containerthreatdetectionsettings.calculate
+- securitycenter.containerthreatdetectionsettings.get
+- securitycenter.eventthreatdetectionsettings.calculate
+- securitycenter.eventthreatdetectionsettings.get
+- securitycenter.findings.group
+- securitycenter.findings.list
+- securitycenter.findings.listFindingPropertyNames
+- securitycenter.notificationconfig.get
+- securitycenter.notificationconfig.list
+- securitycenter.organizationsettings.get
+- securitycenter.securitycentersettings.get
+- securitycenter.securityhealthanalyticssettings.calculate
+- securitycenter.securityhealthanalyticssettings.get
+- securitycenter.sources.get
+- securitycenter.sources.list
+- securitycenter.subscription.get
+- securitycenter.websecurityscannersettings.calculate
+- securitycenter.websecurityscannersettings.get
+- serviceusage.quotas.get
+- serviceusage.services.get
+- serviceusage.services.list
