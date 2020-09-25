@@ -1,12 +1,14 @@
 # gcp-assessment-setup
 Give ScaleSec limited access to your GCP organization for a security assessment.
 
-`scalesec-security-assessment@scalesec-dev.iam.gserviceaccount.com` will be added with minimal privileges into your GCP organization.
+`scalesec-assessment@scalesec.com` will be added with minimal privileges into your GCP organization.
 
 ## Prerequisites
 The following items are required for a successful setup.
 
-- You must be an [Organization Role Admin](https://console.cloud.google.com/iam-admin/roles/details/roles<iam.organizationRoleAdmin)
+- You must have the following IAM Roles on the Organization Level
+    - [Organization Role Admin](https://console.cloud.google.com/iam-admin/roles/details/roles<iam.organizationRoleAdmin)
+    - [Organization Admin](https://console.cloud.google.com/iam-admin/roles/details/roles<resourcemanager.organizationAdmin)
 - The [gcloud](https://cloud.google.com/sdk/) SDK CLI
 - The `jq` CLI utility for your chosen platform
 
@@ -31,19 +33,13 @@ cd gcp-assessment-setup/
 ORG_NAME="example.com"
 ```
 
-_Note: other variables including the `ROLE_ID`, `YAML_PATH`, and `SERVICE_ACCOUNT` should not be changed._ 
+_Note: other variables including the `ROLE_ID`, `YAML_PATH`, and `GROUP` should not be changed._ 
 
 
 5. Run the script to set permissions:
 
 ```
 bash manage_security_assessment_role.sh create
-```
-
-6. Run the script to enable APIs:
-
-```
-bash enable_service_apis.sh
 ```
 
 ## From the Admin Console (https://admin.google.com):
@@ -64,7 +60,7 @@ Google Documentation around this subject is located [here](https://developers.go
     <img src="./IMG/ADV_SETTINGS.png" alt="drawing" width="400"/>
 </p>
 
-9. Input `101372154367894419728` into the `Client Name` Field.  Add `https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.domain.readonly`to the API Scopes Field
+9. Input `101417956419715946363` into the `Client Name` Field.  Add `https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.domain.readonly`to the API Scopes Field
 
 <p align="center">
     <img src="./IMG/ADD_SCOPES.png" alt="drawing"  width="1000"/>

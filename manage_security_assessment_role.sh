@@ -12,7 +12,8 @@
 ORG_NAME="example.com"
 ROLE_ID="scalesec_assessment"
 YAML_PATH="./security_assessment_role.yaml"
-SERVICE_ACCOUNT="scalesec-security-assessment@scalesec-dev.iam.gserviceaccount.com"
+GROUP="scalesec-assessment@scalesec.com"
+
 
 get_org_id ()
 {
@@ -84,12 +85,12 @@ delete ()
 
 create_iam_binding () 
 {
-    gcloud organizations add-iam-policy-binding "${ORG_ID}" --member=serviceAccount:"${SERVICE_ACCOUNT}" --role organizations/"${ORG_ID}"/roles/"${ROLE_ID}"
+    gcloud organizations add-iam-policy-binding "${ORG_ID}" --member=group:"${GROUP}" --role organizations/"${ORG_ID}"/roles/"${ROLE_ID}" --condition=None
 }
 
 remove_iam_binding ()
 {
-    gcloud organizations remove-iam-policy-binding "${ORG_ID}" --member=serviceAccount:"${SERVICE_ACCOUNT}" --role organizations/"${ORG_ID}"/roles/"${ROLE_ID}"     
+    gcloud organizations remove-iam-policy-binding "${ORG_ID}" --member=group:"${GROUP}" --role organizations/"${ORG_ID}"/roles/"${ROLE_ID}" --condition=None    
 }
 
 # get the organization ID
@@ -97,7 +98,7 @@ get_org_id
 
 # look for conflicts
 describe_role=`gcloud iam roles describe "${ROLE_ID}" --organization "${ORG_ID}"`
-deleted=`gcloud iam roles describe --organization "${ORG_ID}" "${ROLE_ID}" --format json | jq -r '.deleted'`
+deleted=`gcloud iam roles describe "${ROLE_ID}" --organization "${ORG_ID}" --format json | jq -r '.deleted'`
 
 # perform action depending on argument
 case "${1}" in
