@@ -1,7 +1,7 @@
 # gcp-assessment-setup
 Give ScaleSec limited access to your GCP organization for a security assessment.
 
-`scalesec-security-assessment@scalesec-assessment.iam.gserviceaccount.com` will be added with minimal privileges into your GCP organization.
+`scalesec-assessment@scalesec.com` will be added with minimal privileges into your GCP organization.
 
 ## Prerequisites
 The following items are required for a successful setup.
@@ -60,7 +60,7 @@ Google Documentation around this subject is located [here](https://developers.go
     <img src="./IMG/ADV_SETTINGS.png" alt="drawing" width="400"/>
 </p>
 
-9. Input `101372154367894419728` into the `Client Name` Field.  Add `https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.domain.readonly`to the API Scopes Field
+9. Input `101417956419715946363` into the `Client Name` Field.  Add `https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.domain.readonly`to the API Scopes Field
 
 <p align="center">
     <img src="./IMG/ADD_SCOPES.png" alt="drawing"  width="1000"/>
