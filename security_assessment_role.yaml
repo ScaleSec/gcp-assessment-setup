@@ -1,73 +1,52 @@
-title: "scalesec-security-assessment"
-description: "Allows ScaleSec consultants minimum read-only permissions to assess GCP security"
-stage: "BETA"
+title: scalesec-security-assessment
+description: Allows ScaleSec consultants minimum read-only permissions to assess GCP security
+stage: BETA
 includedPermissions:
   # Billing Accounts
 - billing.accounts.list
 - billing.resourceAssociations.list
 - billing.accounts.getIamPolicy
 - resourcemanager.organizations.get
+- resourcemanager.projects.list
+
   # Google Cloud Resource Manager
 - resourcemanager.projects.get
 - resourcemanager.projects.getIamPolicy
 - resourcemanager.folders.list
 - resourcemanager.folders.get
-  # Google Cloud IAM
-- iam.serviceAccounts.list
-- iam.serviceAccounts.get
-- iam.serviceAccountKeys.list
-  # Google Cloud GKE
-- container.clusters.list
-- container.clusters.get
-- container.nodes.list
+
   # Google Cloud KMS 
 - cloudkms.keyRings.list
 - cloudkms.cryptoKeys.list
 - cloudkms.cryptoKeyVersions.list
 - cloudkms.cryptoKeys.get
 - cloudkms.cryptoKeys.getIamPolicy
-  # Google Cloud DNS 
-- dns.managedZones.list
+
   # Virtual Private Cloud 
-- compute.regions.list
-- compute.zones.list
-- compute.networks.list
-- compute.networks.get
 - compute.subnetworks.list
 - compute.subnetworks.get
-- compute.firewalls.list
-- compute.firewalls.get
+
   # Google Compute Engine
 - compute.instances.list
 - compute.instances.get
-- compute.projects.get
 - compute.firewalls.get
 - compute.firewalls.list
-- compute.instances.get
-- compute.instances.list
 - compute.networks.get
 - compute.networks.list
 - compute.projects.get
 - compute.regions.list
 - compute.sslPolicies.get
 - compute.sslPolicies.list
-- compute.subnetworks.get
-- compute.subnetworks.list
 - compute.targetHttpsProxies.get
 - compute.targetHttpsProxies.list
 - compute.zones.list
+
   # Google Cloud SQL
 - cloudsql.instances.list
 - cloudsql.instances.get
 - cloudsql.databases.list
 - cloudsql.users.list
-  # Cloud Operations
-- logging.sinks.list
-- monitoring.alertPolicies.list
-- monitoring.alertPolicies.get
-- logging.logMetrics.get
-- logging.logMetrics.list
-- logging.sinks.get
+
   # Google Cloud Storage
 - storage.buckets.list
 - storage.buckets.get
@@ -107,3 +86,740 @@ includedPermissions:
 - serviceusage.quotas.get
 - serviceusage.services.get
 - serviceusage.services.list
+
+  # Access Approval
+- accessapproval.requests.get
+- accessapproval.requests.list
+- accessapproval.settings.get
+
+ # Access Context Manager
+- accesscontextmanager.accessLevels.get
+- accesscontextmanager.accessLevels.list
+- accesscontextmanager.accessPolicies.get
+- accesscontextmanager.accessPolicies.getIamPolicy
+- accesscontextmanager.accessPolicies.list
+- accesscontextmanager.accessZones.get
+- accesscontextmanager.accessZones.list
+- accesscontextmanager.policies.get
+- accesscontextmanager.policies.getIamPolicy
+- accesscontextmanager.policies.list
+- accesscontextmanager.servicePerimeters.get
+- accesscontextmanager.servicePerimeters.list
+
+ # Actions 
+- actions.agent.get
+- actions.agentVersions.get
+- actions.agentVersions.list
+
+ # API Gateway 
+- apigateway.apiconfigs.get
+- apigateway.apiconfigs.getIamPolicy
+- apigateway.apiconfigs.list
+- apigateway.apis.get
+- apigateway.apis.getIamPolicy
+- apigateway.apis.list
+- apigateway.gateways.get
+- apigateway.gateways.getIamPolicy
+- apigateway.gateways.list
+- apigateway.locations.get
+- apigateway.locations.list
+- apigateway.operations.get
+- apigateway.operations.list
+
+ # API Keys 
+- apikeys.keys.get
+- apikeys.keys.list
+- apikeys.keys.lookup
+
+ # App Engine  
+- appengine.applications.get
+- appengine.instances.get
+- appengine.instances.list
+- appengine.memcache.get
+- appengine.memcache.getKey
+- appengine.memcache.list
+- appengine.operations.get
+- appengine.operations.list
+- appengine.services.get
+- appengine.services.list
+- appengine.versions.get
+- appengine.versions.list
+
+ # Artifact Registry
+- artifactregistry.files.get
+- artifactregistry.files.list
+- artifactregistry.packages.get
+- artifactregistry.packages.list
+- artifactregistry.repositories.downloadArtifacts
+- artifactregistry.repositories.get
+- artifactregistry.repositories.getIamPolicy
+- artifactregistry.repositories.list
+- artifactregistry.tags.get
+- artifactregistry.tags.list
+- artifactregistry.versions.get
+- artifactregistry.versions.list
+
+ # Assured Workloads 
+- assuredworkloads.operations.get
+- assuredworkloads.operations.list
+- assuredworkloads.workload.get
+- assuredworkloads.workload.list
+
+ # Auto ML
+- automl.annotationSpecs.get
+- automl.annotationSpecs.list
+- automl.annotations.list
+- automl.columnSpecs.get
+- automl.columnSpecs.list
+- automl.datasets.export
+- automl.datasets.get
+- automl.datasets.getIamPolicy
+- automl.datasets.list
+- automl.examples.get
+- automl.examples.list
+- automl.humanAnnotationTasks.get
+- automl.humanAnnotationTasks.list
+- automl.locations.get
+- automl.locations.getIamPolicy
+- automl.locations.list
+- automl.modelEvaluations.get
+- automl.modelEvaluations.list
+- automl.models.export
+- automl.models.get
+- automl.models.getIamPolicy
+- automl.models.list
+- automl.models.predict
+- automl.operations.get
+- automl.operations.list
+- automl.tableSpecs.get
+- automl.tableSpecs.list
+- automlrecommendations.catalogItems.get
+- automlrecommendations.catalogItems.list
+- automlrecommendations.catalogs.getStats
+- automlrecommendations.catalogs.list
+- automlrecommendations.eventStores.getStats
+- automlrecommendations.events.list
+- automlrecommendations.placements.getStats
+- automlrecommendations.placements.list
+- automlrecommendations.recommendations.list
+
+ # Big Query
+- bigquery.config.get
+- bigquery.connections.getIamPolicy
+- bigquery.connections.list
+- bigquery.datasets.getIamPolicy
+- bigquery.jobs.list
+- bigquery.models.getMetadata
+- bigquery.models.list
+- bigquery.reservationAssignments.list
+- bigquery.reservations.list
+- bigquery.routines.list
+- bigquery.tables.getIamPolicy
+- bigtable.appProfiles.get
+- bigtable.appProfiles.list
+- bigtable.backups.getIamPolicy
+- bigtable.backups.list
+- bigtable.clusters.list
+- bigtable.instances.get
+- bigtable.instances.getIamPolicy
+- bigtable.instances.list
+- bigtable.keyvisualizer.list
+- bigtable.locations.list
+- bigtable.tables.getIamPolicy
+- bigtable.tables.list
+
+ # Binary Authorization
+- binaryauthorization.attestors.get
+- binaryauthorization.attestors.getIamPolicy
+- binaryauthorization.attestors.list
+- binaryauthorization.attestors.verifyImageAttested
+- binaryauthorization.policy.get
+- binaryauthorization.policy.getIamPolicy
+
+ # Cloud Builid
+- cloudbuild.builds.get
+- cloudbuild.builds.list
+
+ # Cloud Functions
+- cloudfunctions.functions.get
+- cloudfunctions.functions.getIamPolicy
+- cloudfunctions.functions.list
+- cloudfunctions.functions.sourceCodeGet
+- cloudfunctions.locations.list
+- cloudfunctions.operations.get
+- cloudfunctions.operations.list
+
+ # Cloud Scheduler 
+- cloudscheduler.jobs.fullView
+- cloudscheduler.jobs.get
+- cloudscheduler.jobs.list
+- cloudscheduler.locations.get
+- cloudscheduler.locations.list
+
+  # Networking
+- compute.externalVpnGateways.get
+- compute.externalVpnGateways.list
+- compute.forwardingRules.get
+- compute.forwardingRules.list
+- compute.globalAddresses.get
+- compute.globalAddresses.list
+- compute.globalForwardingRules.get
+- compute.globalForwardingRules.list
+- compute.globalOperations.get
+- compute.globalOperations.getIamPolicy
+- compute.globalOperations.list
+- compute.globalPublicDelegatedPrefixes.get
+- compute.globalPublicDelegatedPrefixes.list
+- compute.healthChecks.get
+- compute.healthChecks.list
+- compute.healthChecks.useReadOnly
+- compute.httpHealthChecks.get
+- compute.httpHealthChecks.list
+- compute.httpHealthChecks.useReadOnly
+- compute.httpsHealthChecks.get
+- compute.httpsHealthChecks.list
+- compute.httpsHealthChecks.useReadOnly
+- compute.images.get
+- compute.images.getFromFamily
+- compute.images.getIamPolicy
+- compute.images.list
+- compute.images.useReadOnly
+- compute.instanceGroupManagers.get
+- compute.instanceGroupManagers.list
+- compute.instanceGroups.get
+- compute.instanceGroups.list
+- compute.instanceTemplates.get
+- compute.instanceTemplates.getIamPolicy
+- compute.instanceTemplates.list
+- compute.instanceTemplates.useReadOnly
+- compute.instances.getEffectiveFirewalls
+- compute.instances.getGuestAttributes
+- compute.instances.getIamPolicy
+- compute.instances.getShieldedInstanceIdentity
+- compute.instances.getShieldedVmIdentity
+- compute.instances.listReferrers
+- compute.interconnectAttachments.get
+- compute.interconnectAttachments.list
+- compute.interconnectLocations.get
+- compute.interconnectLocations.list
+- compute.interconnects.get
+- compute.interconnects.list
+- compute.machineTypes.get
+- compute.machineTypes.list
+- compute.maintenancePolicies.get
+- compute.maintenancePolicies.getIamPolicy
+- compute.maintenancePolicies.list
+- compute.networkEndpointGroups.get
+- compute.networkEndpointGroups.getIamPolicy
+- compute.networkEndpointGroups.list
+- compute.networks.getEffectiveFirewalls
+- compute.networks.listPeeringRoutes
+- compute.nodeGroups.get
+- compute.nodeGroups.getIamPolicy
+- compute.nodeGroups.list
+- compute.nodeTemplates.get
+- compute.nodeTemplates.getIamPolicy
+- compute.nodeTemplates.list
+- compute.nodeTypes.get
+- compute.nodeTypes.list
+- compute.organizations.listAssociations
+- compute.publicAdvertisedPrefixes.get
+- compute.publicAdvertisedPrefixes.list
+- compute.publicDelegatedPrefixes.get
+- compute.publicDelegatedPrefixes.list
+- compute.regionBackendServices.get
+- compute.regionBackendServices.list
+- compute.regionHealthCheckServices.get
+- compute.regionHealthCheckServices.list
+- compute.regionNotificationEndpoints.get
+- compute.regionNotificationEndpoints.list
+- compute.regionOperations.get
+- compute.regionOperations.getIamPolicy
+- compute.regionOperations.list
+- compute.regions.get
+- compute.reservations.get
+- compute.reservations.list
+- compute.resourcePolicies.get
+- compute.resourcePolicies.list
+- compute.routers.get
+- compute.routers.list
+- compute.routes.get
+- compute.routes.list
+- compute.securityPolicies.get
+- compute.securityPolicies.getIamPolicy
+- compute.securityPolicies.list
+- compute.snapshots.getIamPolicy
+- compute.snapshots.list
+- compute.sslCertificates.get
+- compute.sslCertificates.list
+- compute.sslPolicies.listAvailableFeatures
+- compute.subnetworks.getIamPolicy
+- compute.targetHttpProxies.get
+- compute.targetHttpProxies.list
+- compute.targetInstances.get
+- compute.targetInstances.list
+- compute.targetPools.get
+- compute.targetPools.list
+- compute.targetSslProxies.get
+- compute.targetSslProxies.list
+- compute.targetTcpProxies.get
+- compute.targetTcpProxies.list
+- compute.targetVpnGateways.get
+- compute.targetVpnGateways.list
+- compute.urlMaps.get
+- compute.urlMaps.list
+- compute.urlMaps.validate
+- compute.vpnGateways.get
+- compute.vpnGateways.list
+- compute.vpnTunnels.get
+- compute.vpnTunnels.list
+- compute.zoneOperations.get
+- compute.zoneOperations.getIamPolicy
+- compute.zoneOperations.list
+- compute.zones.get
+
+  # Kubernetes Engine 
+- container.apiServices.get
+- container.apiServices.list
+- container.backendConfigs.get
+- container.backendConfigs.list
+- container.bindings.get
+- container.bindings.list
+- container.certificateSigningRequests.get
+- container.certificateSigningRequests.list
+- container.clusterRoleBindings.get
+- container.clusterRoleBindings.list
+- container.clusterRoles.get
+- container.clusterRoles.list
+- container.clusters.get
+- container.clusters.list
+- container.componentStatuses.get
+- container.componentStatuses.list
+- container.configMaps.get
+- container.configMaps.list
+- container.controllerRevisions.get
+- container.controllerRevisions.list
+- container.cronJobs.get
+- container.cronJobs.getStatus
+- container.cronJobs.list
+- container.csiDrivers.get
+- container.csiDrivers.list
+- container.csiNodes.get
+- container.csiNodes.list
+- container.customResourceDefinitions.get
+- container.customResourceDefinitions.list
+- container.daemonSets.get
+- container.daemonSets.getStatus
+- container.daemonSets.list
+- container.deployments.get
+- container.deployments.getStatus
+- container.deployments.list
+- container.endpoints.get
+- container.endpoints.list
+- container.events.get
+- container.events.list
+- container.horizontalPodAutoscalers.get
+- container.horizontalPodAutoscalers.getStatus
+- container.horizontalPodAutoscalers.list
+- container.ingresses.get
+- container.ingresses.getStatus
+- container.ingresses.list
+- container.initializerConfigurations.get
+- container.initializerConfigurations.list
+- container.jobs.get
+- container.jobs.getStatus
+- container.jobs.list
+- container.limitRanges.get
+- container.limitRanges.list
+- container.localSubjectAccessReviews.list
+- container.namespaces.get
+- container.namespaces.getStatus
+- container.namespaces.list
+- container.networkPolicies.get
+- container.networkPolicies.list
+- container.nodes.get
+- container.nodes.getStatus
+- container.nodes.list
+- container.operations.get
+- container.operations.list
+- container.persistentVolumeClaims.get
+- container.persistentVolumeClaims.getStatus
+- container.persistentVolumeClaims.list
+- container.persistentVolumes.get
+- container.persistentVolumes.getStatus
+- container.persistentVolumes.list
+- container.petSets.get
+- container.petSets.list
+- container.podDisruptionBudgets.get
+- container.podDisruptionBudgets.getStatus
+- container.podDisruptionBudgets.list
+- container.podPresets.get
+- container.podPresets.list
+- container.podSecurityPolicies.get
+- container.podSecurityPolicies.list
+- container.podTemplates.get
+- container.podTemplates.list
+- container.pods.get
+- container.pods.getLogs
+- container.pods.getStatus
+- container.pods.list
+- container.replicaSets.get
+- container.replicaSets.getScale
+- container.replicaSets.getStatus
+- container.replicaSets.list
+- container.replicationControllers.get
+- container.replicationControllers.getScale
+- container.replicationControllers.getStatus
+- container.replicationControllers.list
+- container.resourceQuotas.get
+- container.resourceQuotas.getStatus
+- container.resourceQuotas.list
+- container.roleBindings.get
+- container.roleBindings.list
+- container.roles.get
+- container.roles.list
+- container.runtimeClasses.get
+- container.runtimeClasses.list
+- container.scheduledJobs.get
+- container.scheduledJobs.list
+- container.selfSubjectAccessReviews.create
+- container.selfSubjectAccessReviews.list
+- container.serviceAccounts.get
+- container.serviceAccounts.list
+- container.services.get
+- container.services.getStatus
+- container.services.list
+- container.statefulSets.get
+- container.statefulSets.getScale
+- container.statefulSets.getStatus
+- container.statefulSets.list
+- container.storageClasses.get
+- container.storageClasses.list
+- container.subjectAccessReviews.list
+- container.thirdPartyObjects.get
+- container.thirdPartyObjects.list
+- container.thirdPartyResources.get
+- container.thirdPartyResources.list
+- container.tokenReviews.create
+- containeranalysis.notes.get
+- containeranalysis.notes.getIamPolicy
+- containeranalysis.notes.list
+- containeranalysis.occurrences.get
+- containeranalysis.occurrences.getIamPolicy
+- containeranalysis.occurrences.list
+
+  # Dataflow
+- dataflow.jobs.get
+- dataflow.jobs.list
+
+# DataProc
+- dataproc.agents.get
+- dataproc.agents.list
+- dataproc.autoscalingPolicies.get
+- dataproc.autoscalingPolicies.getIamPolicy
+- dataproc.autoscalingPolicies.list
+- dataproc.autoscalingPolicies.use
+- dataproc.clusters.get
+- dataproc.clusters.getIamPolicy
+- dataproc.clusters.list
+- dataproc.jobs.get
+- dataproc.jobs.getIamPolicy
+- dataproc.jobs.list
+- dataproc.operations.get
+- dataproc.operations.getIamPolicy
+- dataproc.operations.list
+- dataproc.tasks.listInvalidatedLeases
+- dataproc.workflowTemplates.get
+- dataproc.workflowTemplates.getIamPolicy
+- dataproc.workflowTemplates.list
+- dataprocessing.featurecontrols.list
+- dataprocessing.groupcontrols.list
+
+#DLP
+- dlp.analyzeRiskTemplates.get
+- dlp.analyzeRiskTemplates.list
+- dlp.deidentifyTemplates.get
+- dlp.deidentifyTemplates.list
+- dlp.inspectFindings.list
+- dlp.inspectTemplates.get
+- dlp.inspectTemplates.list
+- dlp.jobTriggers.get
+- dlp.jobTriggers.list
+- dlp.jobs.get
+- dlp.jobs.list
+- dlp.storedInfoTypes.get
+- dlp.storedInfoTypes.list
+
+#DNS
+- dns.changes.get
+- dns.changes.list
+- dns.dnsKeys.get
+- dns.dnsKeys.list
+- dns.managedZoneOperations.get
+- dns.managedZoneOperations.list
+- dns.managedZones.get
+- dns.managedZones.list
+- dns.policies.get
+- dns.policies.list
+- dns.projects.get
+- dns.resourceRecordSets.list
+
+# IAM
+- iam.googleapis.com/workloadIdentityPoolProviders.get
+- iam.googleapis.com/workloadIdentityPoolProviders.list
+- iam.googleapis.com/workloadIdentityPools.get
+- iam.googleapis.com/workloadIdentityPools.list
+- iam.roles.get
+- iam.roles.list
+- iam.serviceAccountKeys.get
+- iam.serviceAccountKeys.list
+- iam.serviceAccounts.get
+- iam.serviceAccounts.getIamPolicy
+- iam.serviceAccounts.list
+
+#IAP 
+- iap.projects.getSettings
+- iap.web.getSettings
+- iap.webServiceVersions.getSettings
+- iap.webServices.getSettings
+- iap.webTypes.getSettings
+
+# Identity Platform 
+- identityplatform.workloadPoolProviders.get
+- identityplatform.workloadPoolProviders.list
+- identityplatform.workloadPools.get
+- identityplatform.workloadPools.list
+
+# Logging 
+- logging.buckets.get
+- logging.buckets.list
+- logging.cmekSettings.get
+- logging.exclusions.get
+- logging.exclusions.list
+- logging.logEntries.list
+- logging.logMetrics.get
+- logging.logMetrics.list
+- logging.logServiceIndexes.list
+- logging.logServices.list
+- logging.logs.list
+- logging.queries.create
+- logging.queries.delete
+- logging.queries.get
+- logging.queries.list
+- logging.queries.update
+- logging.sinks.get
+- logging.sinks.list
+- logging.usage.get
+
+# Memcache
+- memcache.instances.get
+- memcache.instances.list
+- memcache.locations.get
+- memcache.locations.list
+- memcache.operations.get
+- memcache.operations.list
+
+# Monitoring
+- monitoring.alertPolicies.get
+- monitoring.alertPolicies.list
+- monitoring.dashboards.get
+- monitoring.dashboards.list
+- monitoring.groups.get
+- monitoring.groups.list
+- monitoring.metricDescriptors.get
+- monitoring.metricDescriptors.list
+- monitoring.monitoredResourceDescriptors.get
+- monitoring.monitoredResourceDescriptors.list
+- monitoring.notificationChannelDescriptors.get
+- monitoring.notificationChannelDescriptors.list
+- monitoring.notificationChannels.get
+- monitoring.notificationChannels.list
+- monitoring.publicWidgets.get
+- monitoring.publicWidgets.list
+- monitoring.services.get
+- monitoring.services.list
+- monitoring.slos.get
+- monitoring.slos.list
+- monitoring.timeSeries.list
+- monitoring.uptimeCheckConfigs.get
+- monitoring.uptimeCheckConfigs.list
+
+# Oauth Config
+- oauthconfig.clientpolicy.get
+- oauthconfig.testusers.get
+- oauthconfig.verification.get
+
+# Org Policy
+- orgpolicy.policy.get
+
+#OS Config
+- osconfig.guestPolicies.get
+- osconfig.guestPolicies.list
+- osconfig.patchDeployments.get
+- osconfig.patchDeployments.list
+- osconfig.patchJobs.get
+- osconfig.patchJobs.list
+
+# Private CA
+- privateca.certificateAuthorities.get
+- privateca.certificateAuthorities.getIamPolicy
+- privateca.certificateAuthorities.list
+- privateca.certificateRevocationLists.get
+- privateca.certificateRevocationLists.getIamPolicy
+- privateca.certificateRevocationLists.list
+- privateca.certificates.get
+- privateca.certificates.getIamPolicy
+- privateca.certificates.list
+- privateca.locations.get
+- privateca.locations.list
+- privateca.operations.get
+- privateca.operations.list
+- privateca.reusableConfigs.get
+- privateca.reusableConfigs.getIamPolicy
+- privateca.reusableConfigs.list
+
+# Pub Sub
+- pubsub.snapshots.get
+- pubsub.snapshots.list
+- pubsub.snapshots.seek
+- pubsub.subscriptions.get
+- pubsub.subscriptions.list
+- pubsub.topics.get
+- pubsub.topics.list
+- pubsublite.subscriptions.get
+- pubsublite.subscriptions.getCursor
+- pubsublite.subscriptions.list
+- pubsublite.topics.get
+- pubsublite.topics.getPartitions
+- pubsublite.topics.list
+- pubsublite.topics.listSubscriptions
+- pubsublite.topics.subscribe
+
+# Recaptcha
+- recaptchaenterprise.keys.get
+- recaptchaenterprise.keys.list
+- recaptchaenterprise.metrics.get
+
+ # Recommender
+- recommender.commitmentUtilizationInsights.get
+- recommender.commitmentUtilizationInsights.list
+- recommender.computeDiskIdleResourceInsights.get
+- recommender.computeDiskIdleResourceInsights.list
+- recommender.computeDiskIdleResourceRecommendations.get
+- recommender.computeDiskIdleResourceRecommendations.list
+- recommender.computeFirewallInsights.get
+- recommender.computeFirewallInsights.list
+- recommender.computeInstanceGroupManagerMachineTypeRecommendations.get
+- recommender.computeInstanceGroupManagerMachineTypeRecommendations.list
+- recommender.computeInstanceIdleResourceRecommendations.get
+- recommender.computeInstanceIdleResourceRecommendations.list
+- recommender.computeInstanceMachineTypeRecommendations.get
+- recommender.computeInstanceMachineTypeRecommendations.list
+- recommender.iamPolicyInsights.get
+- recommender.iamPolicyInsights.list
+- recommender.iamPolicyRecommendations.get
+- recommender.iamPolicyRecommendations.list
+- recommender.iamServiceAccountInsights.get
+- recommender.iamServiceAccountInsights.list
+- recommender.locations.get
+- recommender.locations.list
+- recommender.usageCommitmentRecommendations.get
+- recommender.usageCommitmentRecommendations.list
+
+# Redis
+- redis.instances.get
+- redis.instances.list
+- redis.locations.get
+- redis.locations.list
+- redis.operations.get
+- redis.operations.list
+
+# Cloud Run
+- run.configurations.get
+- run.configurations.list
+- run.locations.list
+- run.revisions.get
+- run.revisions.list
+- run.routes.get
+- run.routes.list
+- run.services.get
+- run.services.getIamPolicy
+- run.services.list
+
+# Secret Manager
+- secretmanager.locations.get
+- secretmanager.locations.list
+- secretmanager.secrets.getIamPolicy
+- secretmanager.secrets.list
+- secretmanager.versions.get
+- secretmanager.versions.list
+
+# Service Management
+- serviceconsumermanagement.consumers.get
+- serviceconsumermanagement.quota.get
+- serviceconsumermanagement.tenancyu.list
+- servicedirectory.endpoints.get
+- servicedirectory.endpoints.getIamPolicy
+- servicedirectory.endpoints.list
+- servicedirectory.locations.get
+- servicedirectory.locations.list
+- servicedirectory.namespaces.get
+- servicedirectory.namespaces.getIamPolicy
+- servicedirectory.namespaces.list
+- servicedirectory.services.get
+- servicedirectory.services.getIamPolicy
+- servicedirectory.services.list
+- servicedirectory.services.resolve
+- servicemanagement.services.get
+- servicemanagement.services.list
+- servicenetworking.operations.get
+- servicenetworking.operations.list
+- servicenetworking.services.get
+- serviceusage.operations.get
+- serviceusage.operations.list
+- serviceusage.quotas.get
+- serviceusage.services.get
+- serviceusage.services.list
+
+# Source Repos
+- source.repos.get
+- source.repos.getIamPolicy
+- source.repos.list
+
+# Spanner
+- spanner.backupOperations.get
+- spanner.backupOperations.list
+- spanner.backups.getIamPolicy
+- spanner.backups.list
+- spanner.databaseOperations.get
+- spanner.databaseOperations.list
+- spanner.databases.beginReadOnlyTransaction
+- spanner.databases.getDdl
+- spanner.databases.getIamPolicy
+- spanner.databases.list
+- spanner.instanceConfigs.get
+- spanner.instanceConfigs.list
+- spanner.instanceOperations.get
+- spanner.instanceOperations.list
+- spanner.instances.get
+- spanner.instances.getIamPolicy
+- spanner.instances.list
+- spanner.sessions.get
+- spanner.sessions.list
+
+# Storage
+- storage.hmacKeys.get
+- storage.hmacKeys.list
+- storagetransfer.jobs.get
+- storagetransfer.jobs.list
+- storagetransfer.operations.get
+- storagetransfer.operations.list
+- storagetransfer.projects.getServiceAccount
+
+# Serverless VPCC 
+- vpcaccess.connectors.get
+- vpcaccess.connectors.list
+- vpcaccess.connectors.use
+- vpcaccess.locations.list
+- vpcaccess.operations.get
+- vpcaccess.operations.list
