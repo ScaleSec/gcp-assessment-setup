@@ -9,7 +9,7 @@
 
 
 # variables
-ORG_NAME="example.com"
+ORG_NAME="gamine-technologies.com"
 ROLE_ID="scalesec_assessment"
 YAML_PATH="./security_assessment_role.yaml"
 GROUP="scalesec-assessment@scalesec.com"
