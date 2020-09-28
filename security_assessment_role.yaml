@@ -215,7 +215,9 @@ includedPermissions:
 - bigquery.reservationAssignments.list
 - bigquery.reservations.list
 - bigquery.routines.list
+- bigquery.tables.get
 - bigquery.tables.getIamPolicy
+- bigquery.datasets.get
 - bigtable.appProfiles.get
 - bigtable.appProfiles.list
 - bigtable.backups.getIamPolicy
