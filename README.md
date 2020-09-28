@@ -68,7 +68,7 @@ Google Documentation around this subject is located [here](https://developers.go
     <img src="./IMG/ADV_SETTINGS.png" alt="drawing" width="400"/>
 </p>
 
-9. Input `101417956419715946363` into the `Client Name` Field.  Add `https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.domain.readonly`to the API Scopes Field
+9. Input `101417956419715946363` into the `Client Name` Field.  Add `https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.domain.readonly,https://www.googleapis.com/auth/admin.directory.group.readonly`to the API Scopes Field
 
 <p align="center">
     <img src="./IMG/ADD_SCOPES.png" alt="drawing"  width="1000"/>
