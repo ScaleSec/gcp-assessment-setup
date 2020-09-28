@@ -12,6 +12,14 @@ The following items are required for a successful setup.
 - The [gcloud](https://cloud.google.com/sdk/) SDK CLI
 - The `jq` CLI utility for your chosen platform
 
+### Optional: Add the scalesec.com domain to the list of allowed domains:
+
+If you have implemented the "Domain Restrited Sharing" Organization Policy, you will not be allowed to add a member from the scalesec.com domain without adding Scalesecs GCP customer ID to your Organization Policy.
+
+To add ScaleSec to the allow list, following the instructions to [set the domain restricted sharing organization policy](https://cloud.google.com/resource-manager/docs/organization-policy/restricting-domains#setting_the_organization_policy)
+
+ScaleSecs GCP customer ID is `C00lp9p1o`
+
 ## Setup instructions
 
 1. Open your Google Cloud [console](https://console.cloud.google.com).
@@ -60,7 +68,7 @@ Google Documentation around this subject is located [here](https://developers.go
     <img src="./IMG/ADV_SETTINGS.png" alt="drawing" width="400"/>
 </p>
 
-9. Input `101417956419715946363` into the `Client Name` Field.  Add `https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.domain.readonly`to the API Scopes Field
+9. Input `101417956419715946363` into the `Client Name` Field.  Add `https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.domain.readonly,https://www.googleapis.com/auth/admin.directory.group.readonly,https://www.googleapis.com/auth/admin.directory.group.member.readonly`to the API Scopes Field
 
 <p align="center">
     <img src="./IMG/ADD_SCOPES.png" alt="drawing"  width="1000"/>
