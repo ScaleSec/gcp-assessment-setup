@@ -14,6 +14,7 @@ includedPermissions:
 - resourcemanager.projects.getIamPolicy
 - resourcemanager.folders.list
 - resourcemanager.folders.get
+- resourcemanager.organizations.getIamPolicy
 
   # Google Cloud KMS 
 - cloudkms.keyRings.list
