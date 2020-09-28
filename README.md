@@ -12,6 +12,14 @@ The following items are required for a successful setup.
 - The [gcloud](https://cloud.google.com/sdk/) SDK CLI
 - The `jq` CLI utility for your chosen platform
 
+### Optional: Add the scalesec.com domain to the list of allowed domains:
+
+If you have implemented the "Domain Restrited Sharing" Organization Policy, you will not be allowed to add a member from the scalesec.com domain without adding Scalesecs GCP customer ID to your Organization Policy.
+
+To add ScaleSec to the allow list, following the instructions to [set the domain restricted sharing organization policy](https://cloud.google.com/resource-manager/docs/organization-policy/restricting-domains#setting_the_organization_policy)
+
+ScaleSecs GCP customer ID is `C00lp9p1o`
+
 ## Setup instructions
 
 1. Open your Google Cloud [console](https://console.cloud.google.com).
