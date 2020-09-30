@@ -41,6 +41,7 @@ includedPermissions:
 - compute.targetHttpsProxies.get
 - compute.targetHttpsProxies.list
 - compute.zones.list
+- compute.addresses.list
 
   # Google Cloud SQL
 - cloudsql.instances.list
