@@ -16,14 +16,18 @@ includedPermissions:
 - resourcemanager.folders.get
 - resourcemanager.organizations.getIamPolicy
 
-  # Google Cloud KMS 
+# Essential Contacts
+- essentialcontacts.contacts.list
+- essentialcontacts.contacts.get
+
+  # Google Cloud KMS
 - cloudkms.keyRings.list
 - cloudkms.cryptoKeys.list
 - cloudkms.cryptoKeyVersions.list
 - cloudkms.cryptoKeys.get
 - cloudkms.cryptoKeys.getIamPolicy
 
-  # Virtual Private Cloud 
+  # Virtual Private Cloud
 - compute.subnetworks.list
 - compute.subnetworks.get
 
@@ -108,12 +112,12 @@ includedPermissions:
 - accesscontextmanager.servicePerimeters.get
 - accesscontextmanager.servicePerimeters.list
 
- # Actions 
+ # Actions
 - actions.agent.get
 - actions.agentVersions.get
 - actions.agentVersions.list
 
- # API Gateway 
+ # API Gateway
 - apigateway.apiconfigs.get
 - apigateway.apiconfigs.getIamPolicy
 - apigateway.apiconfigs.list
@@ -128,12 +132,12 @@ includedPermissions:
 - apigateway.operations.get
 - apigateway.operations.list
 
- # API Keys 
+ # API Keys
 - apikeys.keys.get
 - apikeys.keys.list
 - apikeys.keys.lookup
 
- # App Engine  
+ # App Engine
 - appengine.applications.get
 - appengine.instances.get
 - appengine.instances.list
@@ -161,7 +165,7 @@ includedPermissions:
 - artifactregistry.versions.get
 - artifactregistry.versions.list
 
- # Assured Workloads 
+ # Assured Workloads
 - assuredworkloads.operations.get
 - assuredworkloads.operations.list
 - assuredworkloads.workload.get
@@ -253,7 +257,7 @@ includedPermissions:
 - cloudfunctions.operations.get
 - cloudfunctions.operations.list
 
- # Cloud Scheduler 
+ # Cloud Scheduler
 - cloudscheduler.jobs.fullView
 - cloudscheduler.jobs.get
 - cloudscheduler.jobs.list
@@ -382,7 +386,7 @@ includedPermissions:
 - compute.zoneOperations.list
 - compute.zones.get
 
-  # Kubernetes Engine 
+  # Kubernetes Engine
 - container.apiServices.get
 - container.apiServices.list
 - container.backendConfigs.get
@@ -505,6 +509,9 @@ includedPermissions:
 - container.thirdPartyResources.get
 - container.thirdPartyResources.list
 - container.tokenReviews.create
+- container.clusters.getCredentials
+
+# Container Analysis
 - containeranalysis.notes.get
 - containeranalysis.notes.getIamPolicy
 - containeranalysis.notes.list
@@ -512,7 +519,7 @@ includedPermissions:
 - containeranalysis.occurrences.getIamPolicy
 - containeranalysis.occurrences.list
 
-  # Dataflow
+# Dataflow
 - dataflow.jobs.get
 - dataflow.jobs.list
 
@@ -581,14 +588,14 @@ includedPermissions:
 - iam.serviceAccounts.getIamPolicy
 - iam.serviceAccounts.list
 
-#IAP 
+#IAP
 - iap.projects.getSettings
 - iap.web.getSettings
 - iap.webServiceVersions.getSettings
 - iap.webServices.getSettings
 - iap.webTypes.getSettings
 
-# Identity Platform 
+# Identity Platform
 - identityplatform.workloadPoolProviders.get
 - identityplatform.workloadPoolProviders.list
 - identityplatform.workloadPools.get
@@ -821,7 +828,7 @@ includedPermissions:
 - storagetransfer.operations.list
 - storagetransfer.projects.getServiceAccount
 
-# Serverless VPCC 
+# Serverless VPC
 - vpcaccess.connectors.get
 - vpcaccess.connectors.list
 - vpcaccess.connectors.use
