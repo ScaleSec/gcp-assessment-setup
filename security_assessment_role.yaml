@@ -223,6 +223,9 @@ includedPermissions:
 - bigquery.tables.get
 - bigquery.tables.getIamPolicy
 - bigquery.datasets.get
+- bigquery.transfers.get
+
+# Big Table
 - bigtable.appProfiles.get
 - bigtable.appProfiles.list
 - bigtable.backups.getIamPolicy
