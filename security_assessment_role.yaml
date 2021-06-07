@@ -844,6 +844,11 @@ includedPermissions:
 
 # Cloud Asset Inventory
 
+- cloudasset.assets.listAccessPolicy
+- cloudasset.assets.listIamPolicy
+- cloudasset.assets.listOSInventories
+- cloudasset.assets.listOrgPolicy
+- cloudasset.assets.listResource
 - cloudasset.assets.analyzeIamPolicy
 - cloudasset.assets.exportAccessLevel
 - cloudasset.assets.exportAccessPolicy
