@@ -89,6 +89,9 @@ includedPermissions:
 - securitycenter.subscription.get
 - securitycenter.websecurityscannersettings.calculate
 - securitycenter.websecurityscannersettings.get
+- securitycenter.userinterfacemetadata.get
+
+#  Service Usage
 - serviceusage.quotas.get
 - serviceusage.services.get
 - serviceusage.services.list
@@ -223,6 +226,9 @@ includedPermissions:
 - bigquery.tables.get
 - bigquery.tables.getIamPolicy
 - bigquery.datasets.get
+- bigquery.transfers.get
+
+# Big Table
 - bigtable.appProfiles.get
 - bigtable.appProfiles.list
 - bigtable.backups.getIamPolicy
@@ -838,6 +844,11 @@ includedPermissions:
 
 # Cloud Asset Inventory
 
+- cloudasset.assets.listAccessPolicy
+- cloudasset.assets.listIamPolicy
+- cloudasset.assets.listOSInventories
+- cloudasset.assets.listOrgPolicy
+- cloudasset.assets.listResource
 - cloudasset.assets.analyzeIamPolicy
 - cloudasset.assets.exportAccessLevel
 - cloudasset.assets.exportAccessPolicy
